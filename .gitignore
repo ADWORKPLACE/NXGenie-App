@@ -1,0 +1,36 @@
+# --- Entorno virtual ---
+venv/
+ENV/
+env/
+.venv/
+
+# --- Archivos de entorno / secretos ---
+.env
+*.key
+*.pem
+
+# --- Archivos temporales / cache ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+
+# --- Archivos generados por la app ---
+output/
+C:/NX_Agent/output/
+*.log
+
+# --- Configuración de sistema / editor ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --- Archivos de compilación ---
+build/
+dist/
+*.egg-info/
+
+# --- Streamlit cache ---
+.streamlit/
