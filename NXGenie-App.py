@@ -12,7 +12,7 @@ from openai import OpenAI
 # -------------------- Config --------------------
 st.set_page_config(page_title="NXGENIE", layout="wide")
 st.title("NXGENIE")
-st.markdown("Your AI Assistant for Siemens NXOpen (h2)")
+st.markdown("Your AI Assistant for Siemens NXOpen")
 
 DATA_DIR = "data"
 os.makedirs(DATA_DIR, exist_ok=True)
