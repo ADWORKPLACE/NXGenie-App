@@ -58,7 +58,7 @@ if "uploaded_files_meta" not in st.session_state:
 if "nx_version" not in st.session_state:
     st.session_state["nx_version"] = "NX 2212"
 if "current_session_name" not in st.session_state:
-    st.session_state["current_session_name"] = "sesion-nx"
+    st.session_state["current_session_name"] = "Session-1"
 
 # -------------------- KEY --------------------
 load_dotenv()
