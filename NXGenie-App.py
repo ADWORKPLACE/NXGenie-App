@@ -132,26 +132,25 @@ with st.sidebar:
     st.markdown("---")
     st.subheader("💾 Memory (save/load session)")
     st.session_state["current_session_name"] = st.text_input("Session name", value=st.session_state.get("current_session_name","session-nx"))
-    colA, colB = st.columns(2)
-    with colA:
-        if st.button("Save session"):
+    
+    if st.button("Save session"):
             save_session(st.session_state["current_session_name"], dict(st.session_state))
             st.success("Session saved to /data.")
-    with colB:
-        existing = list_sessions()
-        sel = st.selectbox("Load existing session", options=["(select)"] + existing, index=0)
-        if st.button("Load"):
-            if sel and sel != "(select)":
-                loaded = load_session(sel)
-                if loaded:
-                    st.session_state["persistent_context"] = loaded.get("persistent_context","")
-                    st.session_state["messages"] = loaded.get("messages",[])
-                    st.session_state["nx_version"] = loaded.get("nx_version","NX 2212")
-                    st.session_state["uploaded_files_meta"] = loaded.get("uploaded_files_meta", [])
-                    st.session_state["current_session_name"] = sel
-                    st.success(f"Session '{sel}' loaded. (Files must be re-uploaded if required)")
-                else:
-                    st.error("The session could not be loaded.")
+   
+    existing = list_sessions()
+    sel = st.selectbox("Load existing session", options=["(select)"] + existing, index=0)
+    if st.button("Load"):
+        if sel and sel != "(select)":
+            loaded = load_session(sel)
+            if loaded:
+                st.session_state["persistent_context"] = loaded.get("persistent_context","")
+                st.session_state["messages"] = loaded.get("messages",[])
+                st.session_state["nx_version"] = loaded.get("nx_version","NX 2212")
+                st.session_state["uploaded_files_meta"] = loaded.get("uploaded_files_meta", [])
+                st.session_state["current_session_name"] = sel
+                st.success(f"Session '{sel}' loaded. (Files must be re-uploaded if required)")
+            else:
+                st.error("The session could not be loaded.")
 
 # -------------------- Client OpenAI --------------------
 def ensure_client(key: str) -> OpenAI:
