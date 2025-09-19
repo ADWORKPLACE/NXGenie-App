@@ -283,4 +283,4 @@ with col_actions:
         st.info("Upload one or more files in the sidebar to enable processing.")
 
 st.markdown("---")
-st.caption("Memory on disk (/data), multi-file and NX version selector included. Made with ❤️, OpenAI and by Argentina Diaz")
+st.caption("Made by Argentina Diaz")
