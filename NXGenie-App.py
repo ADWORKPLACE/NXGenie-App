@@ -13,8 +13,8 @@ from openai import OpenAI
 st.set_page_config(page_title="NXGENIE", layout="wide")
 st.markdown("<h1 style='text-align: center;'>NXGENIE</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Your AI Assistant for Siemens NXOpen</h3>", unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center;'>Welcome to NXGenie!</h2>", unsafe_allow_html=True)
-st.markdown("<h2 style='text-align: center;'>An AI assistant that cleans, optimizes, and documents your NXOpen journals/code, saving your time and improving code quality</h2>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>Welcome to NXGenie!</p>", unsafe_allow_html=True)
+st.markdown("<p style='text-align: center;'>An AI assistant that cleans, optimizes, and documents your NXOpen journals/code, saving your time and improving code quality</p>", unsafe_allow_html=True)
 
 DATA_DIR = "data"
 os.makedirs(DATA_DIR, exist_ok=True)
