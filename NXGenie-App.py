@@ -11,7 +11,8 @@ from openai import OpenAI
 
 # -------------------- Config --------------------
 st.set_page_config(page_title="NXGENIE", layout="wide")
-st.title("NXGENIE - Your AI Assistant for Siemens NXOpen (Python)")
+st.title("NXGENIE")
+st.markdown("Your AI Assistant for Siemens NXOpen (h2)")
 
 DATA_DIR = "data"
 os.makedirs(DATA_DIR, exist_ok=True)
