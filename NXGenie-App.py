@@ -284,4 +284,7 @@ with col_actions:
         st.info("Upload one or more files in the sidebar to enable processing.")
 
 st.markdown("---")
-st.caption("Made by Argentina Diaz")
+st.markdown(
+    "<p style='text-align: center; color: gray;'>Made by Argentina Diaz</p>",
+    unsafe_allow_html=True
+)
