@@ -213,27 +213,7 @@ def extract_code_block(text: str) -> str | None:
     return None
 
 # -------------------- principal UI --------------------
-col_actions, col_chat = st.columns([3, 2])
-
-with col_chat:
-    st.subheader("💬 Chat")
-    render_chat()
-    user_msg = st.chat_input("Type a message...")
-    if user_msg:
-        st.session_state["messages"].append({"role": "user", "content": user_msg})
-        with st.chat_message("user"):
-            st.markdown(user_msg)
-
-        client = ensure_client(api_key)
-        msgs = [{"role": "system", "content": build_system_prompt()}] + st.session_state["messages"]
-        with st.chat_message("assistant"):
-           with st.spinner("Thinking..."):
-               try:
-                   reply = call_openai(client, msgs)
-               except Exception as e:
-                   reply = f"Error generating response: {e}"
-               st.markdown(reply)
-               st.session_state["messages"].append({"role": "assistant", "content": reply})
+col_actions = st.container()
 
 with col_actions:
     st.subheader("🧹 Process code (multi-file)")
