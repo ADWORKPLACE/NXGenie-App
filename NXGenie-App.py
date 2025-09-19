@@ -11,7 +11,7 @@ from openai import OpenAI
 
 # -------------------- Config --------------------
 st.set_page_config(page_title="NXGENIE", layout="wide")
-st.title("<h1 style='text-align: center;'>NXGENIE</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>NXGENIE</h1>", unsafe_allow_html=True)
 st.markdown("<h3 style='text-align: center;'>Your AI Assistant for Siemens NXOpen</h3>", unsafe_allow_html=True)
 
 DATA_DIR = "data"
